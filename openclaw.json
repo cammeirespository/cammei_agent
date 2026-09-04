@@ -40,7 +40,7 @@
         "default": true,
         "name": "Cammei Assistant",
         "workspace": "~/.openclaw/workspace-main",
-        "model": "google/gemini-2.5-flash",
+        "model": "groq/llama-3.3-70b-versatile",
         "skills": [],
         "tools": {
           "allow": ["read", "sessions_spawn", "sessions_send", "sessions_list", "session_status"]
@@ -50,7 +50,7 @@
       "architect": {
         "name": "Cammei Architect",
         "workspace": "~/.openclaw/workspace-architect",
-        "model": "google/gemini-2.5-flash",
+        "model": "groq/llama-3.3-70b-versatile",
         "skills": [],
         "tools": {
           "allow": ["read"],
