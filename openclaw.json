@@ -8,15 +8,13 @@
 
   "models": {
     "providers": {
-      "google": {
-        "apiKey": { "source": "env", "provider": "default", "id": "GEMINI_API_KEY" }
-      },
       "groq": {
         "baseUrl": "https://api.groq.com/openai/v1",
         "apiKey": { "source": "env", "provider": "default", "id": "GROQ_API_KEY" },
         "models": [
-          { "id": "llama-3.3-70b-versatile" },
-          { "id": "qwen-2.5-coder-32b" }
+          { "id": "openai/gpt-oss-120b" },
+          { "id": "openai/gpt-oss-20b" },
+          { "id": "qwen/qwen3.8-27b" }
         ]
       }
     }
@@ -40,7 +38,7 @@
         "default": true,
         "name": "Cammei Assistant",
         "workspace": "~/.openclaw/workspace-main",
-        "model": "google/gemini-2.5-flash",
+        "model": "groq/openai/gpt-oss-120b",
         "skills": [],
         "tools": {
           "allow": ["read", "sessions_spawn", "sessions_send", "sessions_list", "session_status"]
@@ -50,7 +48,7 @@
       "architect": {
         "name": "Cammei Architect",
         "workspace": "~/.openclaw/workspace-architect",
-        "model": "google/gemini-2.5-flash",
+        "model": "groq/openai/gpt-oss-120b",
         "skills": [],
         "tools": {
           "allow": ["read"],
@@ -61,7 +59,7 @@
       "coder": {
         "name": "Cammei Coder",
         "workspace": "~/.openclaw/workspace-coder",
-        "model": "groq/qwen-2.5-coder-32b",
+        "model": "groq/qwen/qwen3.8-27b",
         "skills": [],
         "sandbox": {
           "mode": "all",
@@ -75,7 +73,7 @@
       "github": {
         "name": "Cammei GitHub Liaison",
         "workspace": "~/.openclaw/workspace-github",
-        "model": "groq/llama-3.3-70b-versatile",
+        "model": "groq/openai/gpt-oss-20b",
         "skills": ["github"],
         "tools": {
           "allow": ["read"],
