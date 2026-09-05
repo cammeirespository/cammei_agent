@@ -1,6 +1,6 @@
 {
   "gateway": {
-    "bind": "all",
+    "bind": "auto",
     "auth": {
       "mode": "token"
     }
