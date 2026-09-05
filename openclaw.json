@@ -13,9 +13,9 @@
         "baseUrl": "https://api.groq.com/openai/v1",
         "apiKey": { "source": "env", "provider": "default", "id": "GROQ_API_KEY" },
         "models": [
-          { "id": "openai/gpt-oss-120b" },
-          { "id": "openai/gpt-oss-20b" },
-          { "id": "qwen/qwen3.8-27b" }
+          { "id": "openai/gpt-oss-120b", "name": "GPT OSS 120B" },
+          { "id": "openai/gpt-oss-20b", "name": "GPT OSS 20B" },
+          { "id": "qwen/qwen3.8-27b", "name": "Qwen 3.8 27B" }
         ]
       }
     }
@@ -26,14 +26,13 @@
       "github": {
         "apiKey": { "source": "env", "provider": "default", "id": "GITHUB_TOKEN" },
         "env": {
-          "GITHUB_REPO": { "source": "env", "provider": "default", "id": "GITHUB_REPO" }
+          "GITHUB_REPO": "https://github.com/cammeirespository"
         }
       }
     }
   },
 
   "agents": {
-    "ownership": "explicit",
     "entries": {
       "main": {
         "default": true,
@@ -83,4 +82,4 @@
       }
     }
   }
-}
+      }
