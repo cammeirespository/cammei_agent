@@ -1,6 +1,6 @@
 {
   "gateway": {
-    "bind": "loopback",
+    "bind": "all",
     "auth": {
       "mode": "token"
     }
