@@ -27,7 +27,7 @@
       "github": {
         "apiKey": { "source": "env", "provider": "default", "id": "GITHUB_TOKEN" },
         "env": {
-          "GITHUB_REPO": "your-github-username-or-org/your-repo-name"
+          "GITHUB_REPO": "https://github.com/cammeirespository"
         }
       }
     }
