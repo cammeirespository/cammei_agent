@@ -1,7 +1,8 @@
 {
   "gateway": {
     "mode": "local",
-    "bind": "auto",
+    "bind": "custom",
+    "host": "0.0.0.0",
     "auth": {
       "mode": "token"
     }
@@ -26,7 +27,7 @@
       "github": {
         "apiKey": { "source": "env", "provider": "default", "id": "GITHUB_TOKEN" },
         "env": {
-          "GITHUB_REPO": "https://github.com/cammeirespository"
+          "GITHUB_REPO": "your-github-username-or-org/your-repo-name"
         }
       }
     }
@@ -82,4 +83,4 @@
       }
     }
   }
-      }
+}
