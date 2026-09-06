@@ -2,6 +2,12 @@ FROM node:24-slim
 
 RUN npm install -g openclaw @openclaw/groq-provider
 
+# Diagnostic dump — prints straight into the Render build log so we can
+# read the real flags/config options instead of guessing at them
+RUN openclaw gateway --help || true
+RUN openclaw --help || true
+RUN openclaw doctor --help || true
+
 # Bake your agent config into OpenClaw's expected state directory
 COPY openclaw.json /root/.openclaw/openclaw.json
 COPY workspace-main /root/.openclaw/workspace-main
