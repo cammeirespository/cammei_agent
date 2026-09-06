@@ -1,6 +1,6 @@
 FROM node:24-slim
 
-RUN npm install -g openclaw
+RUN npm install -g openclaw @openclaw/groq-provider
 
 # Bake your agent config into OpenClaw's expected state directory
 COPY openclaw.json /root/.openclaw/openclaw.json
@@ -13,4 +13,10 @@ COPY workspace-github /root/.openclaw/workspace-github
 # GITHUB_REPO, OPENCLAW_GATEWAY_TOKEN, and PORT as real env vars at runtime,
 # set in the Render dashboard, not baked into the image.
 
-CMD ["sh", "-c", "openclaw gateway --port $PORT"]
+# Run twice: OpenClaw's first boot can self-heal remaining config/plugin
+# state and then deliberately exit rather than start against stale state
+# ("refusing to report the gateway ready" in the logs). The second
+# invocation starts clean against the now-finalized config. If the plugin
+# pre-install above already covers everything, the first call just
+# succeeds and the second is a harmless no-op restart.
+CMD ["sh", "-c", "openclaw gateway --port $PORT || openclaw gateway --port $PORT"]
