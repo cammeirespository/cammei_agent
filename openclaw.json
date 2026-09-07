@@ -6,7 +6,8 @@
     "auth": {
       "mode": "token",
       "trustedProxy": {
-        "allowLoopback": true
+        "allowLoopback": true,
+        "userHeader": "x-forwarded-user"
       }
     }
   },
