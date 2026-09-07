@@ -9,6 +9,11 @@
         "allowLoopback": true,
         "userHeader": "x-forwarded-user"
       }
+    },
+    "http": {
+      "endpoints": {
+        "chatCompletions": { "enabled": true }
+      }
     }
   },
 
