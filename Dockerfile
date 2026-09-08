@@ -10,8 +10,8 @@ COPY workspace-coder /root/.openclaw/workspace-coder
 COPY workspace-github /root/.openclaw/workspace-github
 
 # No .env file here on purpose — Render injects GROQ_API_KEY, GITHUB_TOKEN,
-# GITHUB_REPO, OPENCLAW_GATEWAY_TOKEN, and PORT as real env vars at runtime,
-# set in the Render dashboard, not baked into the image.
+# OPENCLAW_GATEWAY_TOKEN, and PORT as real env vars at runtime, set in the
+# Render dashboard, not baked into the image.
 
 # Official fix per OpenClaw docs: run doctor --fix once to settle any
 # plugin/config migrations, THEN start the gateway clean. This is the
