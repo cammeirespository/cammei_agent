@@ -5,6 +5,7 @@
     "trustedProxies": ["127.0.0.1"],
     "auth": {
       "mode": "token",
+      "token": { "source": "env", "provider": "default", "id": "OPENCLAW_GATEWAY_TOKEN" },
       "trustedProxy": {
         "allowLoopback": true,
         "userHeader": "x-forwarded-user"
@@ -32,11 +33,14 @@
   },
 
   "skills": {
-    "entries": {
-      "github": {
-        "apiKey": { "source": "env", "provider": "default", "id": "GITHUB_TOKEN" },
-        "env": {
-          "GITHUB_REPO": "https://github.com/cammeirespository"
+    "entries": {}
+  },
+
+  "tools": {
+    "web": {
+      "fetch": {
+        "headers": {
+          "Authorization": "Bearer ${GITHUB_TOKEN}"
         }
       }
     }
@@ -84,9 +88,9 @@
         "name": "Cammei GitHub Liaison",
         "workspace": "~/.openclaw/workspace-github",
         "model": "groq/openai/gpt-oss-20b",
-        "skills": ["github"],
+        "skills": [],
         "tools": {
-          "allow": ["read"],
+          "allow": ["read", "web_fetch"],
           "deny": ["exec", "write", "edit", "apply_patch"]
         }
       }
