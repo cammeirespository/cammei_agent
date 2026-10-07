@@ -32,6 +32,26 @@
     }
   },
 
+  "plugins": {
+    "entries": {
+      "browser": { "enabled": false },
+      "canvas": { "enabled": false },
+      "cua-computer": { "enabled": false },
+      "ollama": { "enabled": false },
+      "geolocation": { "enabled": false },
+      "talk-voice": { "enabled": false },
+      "anthropic": { "enabled": false },
+      "openai": { "enabled": false },
+      "xai": { "enabled": false },
+      "file-transfer": { "enabled": false },
+      "device-pair": { "enabled": false },
+      "groq": { "enabled": true },
+      "github": { "enabled": true },
+      "memory-core": { "enabled": true },
+      "linux-node": { "enabled": true }
+    }
+  },
+
   "skills": {
     "entries": {}
   },
@@ -51,7 +71,7 @@
       "main": {
         "default": true,
         "name": "Cammei Assistant",
-        "workspace": "~/.openclaw/workspace-main",
+        "workspace": "\~/.openclaw/workspace-main",
         "model": "groq/openai/gpt-oss-120b",
         "skills": [],
         "tools": {
@@ -61,7 +81,7 @@
 
       "architect": {
         "name": "Cammei Architect",
-        "workspace": "~/.openclaw/workspace-architect",
+        "workspace": "\~/.openclaw/workspace-architect",
         "model": "groq/openai/gpt-oss-120b",
         "skills": [],
         "tools": {
@@ -72,11 +92,11 @@
 
       "coder": {
         "name": "Cammei Coder",
-        "workspace": "~/.openclaw/workspace-coder",
+        "workspace": "\~/.openclaw/workspace-coder",
         "model": "groq/qwen/qwen3.8-27b",
         "skills": [],
         "sandbox": {
-          "mode": "all",
+          "mode": "non-main",
           "scope": "agent"
         },
         "tools": {
@@ -86,7 +106,7 @@
 
       "github": {
         "name": "Cammei GitHub Liaison",
-        "workspace": "~/.openclaw/workspace-github",
+        "workspace": "\~/.openclaw/workspace-github",
         "model": "groq/openai/gpt-oss-20b",
         "skills": [],
         "tools": {
@@ -96,4 +116,4 @@
       }
     }
   }
-}
+      }
