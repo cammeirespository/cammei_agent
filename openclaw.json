@@ -2,18 +2,12 @@
   "gateway": {
     "mode": "local",
     "bind": "lan",
-    "trustedProxies": ["127.0.0.1"],
     "auth": {
       "mode": "token",
-      "token": { "source": "env", "provider": "default", "id": "OPENCLAW_GATEWAY_TOKEN" },
-      "trustedProxy": {
-        "allowLoopback": true,
-        "userHeader": "x-forwarded-user"
-      }
-    },
-    "http": {
-      "endpoints": {
-        "chatCompletions": { "enabled": true }
+      "token": {
+        "source": "env",
+        "provider": "default",
+        "id": "OPENCLAW_GATEWAY_TOKEN"
       }
     }
   },
@@ -22,7 +16,11 @@
     "providers": {
       "groq": {
         "baseUrl": "https://api.groq.com/openai/v1",
-        "apiKey": { "source": "env", "provider": "default", "id": "GROQ_API_KEY" },
+        "apiKey": {
+          "source": "env",
+          "provider": "default",
+          "id": "GROQ_API_KEY"
+        },
         "models": [
           { "id": "openai/gpt-oss-120b", "name": "GPT OSS 120B" },
           { "id": "openai/gpt-oss-20b", "name": "GPT OSS 20B" },
@@ -45,10 +43,10 @@
       "xai": { "enabled": false },
       "file-transfer": { "enabled": false },
       "device-pair": { "enabled": false },
-      "groq": { "enabled": true },
+      "linux-node": { "enabled": false },
+      "memory-core": { "enabled": false },
       "github": { "enabled": true },
-      "memory-core": { "enabled": true },
-      "linux-node": { "enabled": true }
+      "groq": { "enabled": true }
     }
   },
 
@@ -78,18 +76,15 @@
           "allow": ["read", "sessions_spawn", "sessions_send", "sessions_list", "session_status"]
         }
       },
-
       "architect": {
         "name": "Cammei Architect",
         "workspace": "\~/.openclaw/workspace-architect",
         "model": "groq/openai/gpt-oss-120b",
         "skills": [],
         "tools": {
-          "allow": ["read"],
-          "deny": ["exec", "write", "edit", "apply_patch", "browser"]
+          "allow": ["read"]
         }
       },
-
       "coder": {
         "name": "Cammei Coder",
         "workspace": "\~/.openclaw/workspace-coder",
@@ -102,17 +97,15 @@
           "allow": ["read", "write", "edit", "exec"]
         }
       },
-
       "github": {
         "name": "Cammei GitHub Liaison",
         "workspace": "\~/.openclaw/workspace-github",
         "model": "groq/openai/gpt-oss-20b",
         "skills": [],
         "tools": {
-          "allow": ["read", "web_fetch"],
-          "deny": ["exec", "write", "edit", "apply_patch"]
+          "allow": ["read", "web_fetch"]
         }
       }
     }
   }
-      }
+}
