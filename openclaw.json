@@ -91,17 +91,18 @@
       },
 
       "coder": {
-  "name": "Cammei Coder",
-  "workspace": "\~/.openclaw/workspace-coder",
-  "model": "groq/qwen/qwen3.8-27b",
-  "skills": [],
-  "sandbox": {
-    "mode": "off"
-  },
-  "tools": {
-    "allow": ["read", "write", "edit", "exec"]
-  }
-      }
+        "name": "Cammei Coder",
+        "workspace": "\~/.openclaw/workspace-coder",
+        "model": "groq/qwen/qwen3.8-27b",
+        "skills": [],
+        "sandbox": {
+          "mode": "off"
+        },
+        "tools": {
+          "allow": ["read", "write", "edit", "exec"]
+        }
+      },
+
       "github": {
         "name": "Cammei GitHub Liaison",
         "workspace": "\~/.openclaw/workspace-github",
