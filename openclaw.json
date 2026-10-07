@@ -73,9 +73,16 @@
         "model": "groq/openai/gpt-oss-120b",
         "skills": [],
         "tools": {
-          "allow": ["read", "sessions_spawn", "sessions_send", "sessions_list", "session_status"]
+          "allow": [
+            "read",
+            "sessions_spawn",
+            "sessions_send",
+            "sessions_list",
+            "session_status"
+          ]
         }
       },
+
       "architect": {
         "name": "Cammei Architect",
         "workspace": "\~/.openclaw/workspace-architect",
@@ -85,18 +92,7 @@
           "allow": ["read"]
         }
       },
-      "coder": {
-        "name": "Cammei Coder",
-        "workspace": "\~/.openclaw/workspace-coder",
-        "model": "groq/qwen/qwen3.8-27b",
-        "skills": [],
-        "sandbox": {
-          "mode": "off"
-        },
-        "tools": {
-          "allow": ["read", "write", "edit", "exec"]
-        }
-      },
+
       "github": {
         "name": "Cammei GitHub Liaison",
         "workspace": "\~/.openclaw/workspace-github",
