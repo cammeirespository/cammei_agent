@@ -16,4 +16,4 @@ COPY workspace-github /root/.openclaw/workspace-github
 # Official fix per OpenClaw docs: run doctor --fix once to settle any
 # plugin/config migrations, THEN start the gateway clean. This is the
 # documented pattern for container image startup, not a guess.
-CMD ["sh", "-c", "openclaw doctor --fix --non-interactive || true; openclaw gateway --port $PORT"]
+CMD ["sh", "-c", "openclaw doctor --fix --non-interactive || true; openclaw gateway --port ${PORT:-8080} --bind lan --allow-unconfigured"]
