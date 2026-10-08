@@ -117,24 +117,8 @@
     "entries": {
       "main": {
         "default": true,
-        "name": "Cammei Assistant",
+        "name": "Cammei Engineering Agent",
         "workspace": "~/.openclaw/workspace-main",
-        "model": "groq/openai/gpt-oss-120b",
-        "skills": [],
-        "tools": {
-          "allow": [
-            "read",
-            "sessions_spawn",
-            "sessions_send",
-            "sessions_list",
-            "session_status"
-          ]
-        }
-      },
-
-      "architect": {
-        "name": "Cammei Architect",
-        "workspace": "~/.openclaw/workspace-architect",
         "model": "groq/openai/gpt-oss-120b",
         "skills": [],
         "tools": {
