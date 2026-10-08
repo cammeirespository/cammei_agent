@@ -91,10 +91,10 @@
         "enabled": false
       },
       "github": {
-        "enabled": true
+        "enabled": false
       },
       "groq": {
-        "enabled": true
+        "enabled": false
       }
     }
   },
@@ -140,19 +140,6 @@
         "tools": {
           "allow": [
             "read"
-          ]
-        }
-      },
-
-      "github": {
-        "name": "Cammei GitHub Liaison",
-        "workspace": "~/.openclaw/workspace-github",
-        "model": "groq/openai/gpt-oss-20b",
-        "skills": [],
-        "tools": {
-          "allow": [
-            "read",
-            "web_fetch"
           ]
         }
       }
