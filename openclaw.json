@@ -91,7 +91,7 @@
         "enabled": false
       },
       "github": {
-        "enabled": false
+        "enabled": true
       },
       "groq": {
         "enabled": false
