@@ -32,18 +32,9 @@
           "id": "GROQ_API_KEY"
         },
         "models": [
-          {
-            "id": "openai/gpt-oss-120b",
-            "name": "GPT OSS 120B"
-          },
-          {
-            "id": "openai/gpt-oss-20b",
-            "name": "GPT OSS 20B"
-          },
-          {
-            "id": "qwen/qwen3.8-27b",
-            "name": "Qwen 3.8 27B"
-          }
+          { "id": "openai/gpt-oss-120b", "name": "GPT OSS 120B" },
+          { "id": "openai/gpt-oss-20b", "name": "GPT OSS 20B" },
+          { "id": "qwen/qwen3.8-27b", "name": "Qwen 3.8 27B" }
         ]
       }
     }
@@ -51,51 +42,21 @@
 
   "plugins": {
     "entries": {
-      "browser": {
-        "enabled": false
-      },
-      "canvas": {
-        "enabled": false
-      },
-      "cua-computer": {
-        "enabled": false
-      },
-      "ollama": {
-        "enabled": false
-      },
-      "geolocation": {
-        "enabled": false
-      },
-      "talk-voice": {
-        "enabled": false
-      },
-      "anthropic": {
-        "enabled": false
-      },
-      "openai": {
-        "enabled": false
-      },
-      "xai": {
-        "enabled": false
-      },
-      "file-transfer": {
-        "enabled": false
-      },
-      "device-pair": {
-        "enabled": false
-      },
-      "linux-node": {
-        "enabled": false
-      },
-      "memory-core": {
-        "enabled": false
-      },
-      "github": {
-        "enabled": true
-      },
-      "groq": {
-        "enabled": false
-      }
+      "browser": { "enabled": false },
+      "canvas": { "enabled": false },
+      "cua-computer": { "enabled": false },
+      "ollama": { "enabled": false },
+      "geolocation": { "enabled": false },
+      "talk-voice": { "enabled": false },
+      "anthropic": { "enabled": false },
+      "openai": { "enabled": false },
+      "xai": { "enabled": false },
+      "file-transfer": { "enabled": false },
+      "device-pair": { "enabled": false },
+      "linux-node": { "enabled": false },
+      "memory-core": { "enabled": false },
+      "github": { "enabled": true },
+      "groq": { "enabled": true }
     }
   },
 
@@ -118,15 +79,13 @@
       "architect": {
         "default": true,
         "name": "Cammei Architect",
-        "workspace": "~/.openclaw/workspace-architect",
+        "workspace": "\~/.openclaw/workspace-architect",
         "model": "groq/openai/gpt-oss-120b",
         "skills": [],
         "tools": {
-          "allow": [
-            "read"
-          ]
+          "allow": ["read"]
         }
       }
     }
   }
-}
+      }
