@@ -2,22 +2,12 @@
   "gateway": {
     "mode": "local",
     "bind": "lan",
-    "trustedProxies": [
-      "100.64.0.0/10"
-    ],
     "auth": {
       "mode": "token",
       "token": {
         "source": "env",
         "provider": "default",
         "id": "OPENCLAW_GATEWAY_TOKEN"
-      }
-    },
-    "http": {
-      "endpoints": {
-        "chatCompletions": {
-          "enabled": true
-        }
       }
     }
   },
@@ -32,9 +22,10 @@
           "id": "GROQ_API_KEY"
         },
         "models": [
-          { "id": "openai/gpt-oss-120b", "name": "GPT OSS 120B" },
-          { "id": "openai/gpt-oss-20b", "name": "GPT OSS 20B" },
-          { "id": "qwen/qwen3.8-27b", "name": "Qwen 3.8 27B" }
+          {
+            "id": "openai/gpt-oss-120b",
+            "name": "GPT OSS 120B"
+          }
         ]
       }
     }
@@ -55,23 +46,13 @@
       "device-pair": { "enabled": false },
       "linux-node": { "enabled": false },
       "memory-core": { "enabled": false },
-      "github": { "enabled": true },
+      "github": { "enabled": false },
       "groq": { "enabled": true }
     }
   },
 
   "skills": {
     "entries": {}
-  },
-
-  "tools": {
-    "web": {
-      "fetch": {
-        "headers": {
-          "Authorization": "Bearer ${GITHUB_TOKEN}"
-        }
-      }
-    }
   },
 
   "agents": {
@@ -88,4 +69,4 @@
       }
     }
   }
-      }
+}
